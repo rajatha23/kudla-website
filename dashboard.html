@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Namma Kudla</title>
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+<body>
+
+    <header class="main-header">
+        </header>
+
+    <main class="container dashboard-layout">
+        <aside class="dashboard-sidebar">
+            <h2>Admin Menu</h2>
+            <ul>
+                <li><a href="#overview" class="active-dash-link">Dashboard Overview</a></li>
+                <li><a href="#users">User Management</a></li>
+                <li><a href="#content">Content Management</a></li>
+                <li><a href="#">Notifications (5)</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </aside>
+
+        <section class="dashboard-content">
+            <h1 id="overview">Dashboard Overview</h1>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h3>Total Users</h3>
+                    <p class="metric-value" id="total-users">245</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Total Posts</h3>
+                    <p class="metric-value" id="total-posts">120</p>
+                </div>
+                <div class="metric-card">
+                    <h3>New Signups (7 Days)</h3>
+                    <p class="metric-value" id="new-signups">15</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Guides Active</h3>
+                    <p class="metric-value" id="active-guides">8</p>
+                </div>
+            </div>
+            
+            <div class="chart-section">
+                <h2>Activity Visualizations</h2>
+                <div class="chart-placeholder" style="height: 300px; background: #e9ecef; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                    [Placeholder for Chart Visualization: Users vs. Bloggers Over Time]
+                </div>
+            </div>
+
+            <hr>
+
+            <h1 id="users">User Management</h1>
+            <div class="user-management-actions">
+                <button class="cta-button" id="add-user-btn">➕ Add New User</button>
+                <input type="text" placeholder="Search users..." class="search-input">
+            </div>
+
+            <div class="user-table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-table-body">
+                        <tr data-user-id="1">
+                            <td>1</td>
+                            <td>Arun Rao</td>
+                            <td>arun@kudlaguide.com</td>
+                            <td class="user-role">Guide</td>
+                            <td class="user-status active">Active</td>
+                            <td>
+                                <button class="action-btn edit-btn">Edit</button>
+                                <button class="action-btn delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr data-user-id="2">
+                            <td>2</td>
+                            <td>Priya S.</td>
+                            <td>priya@blog.com</td>
+                            <td class="user-role">Blogger</td>
+                            <td class="user-status active">Active</td>
+                            <td>
+                                <button class="action-btn edit-btn">Edit</button>
+                                <button class="action-btn delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
